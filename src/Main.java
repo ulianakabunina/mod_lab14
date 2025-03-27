@@ -7,11 +7,11 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.print("Введите количество айпишников: ");
         int n = input.nextInt();
-        input.nextLine(); // Считываем символ новой строки после nextInt()
+        input.nextLine();
 
         String[] adresses = new String[n];
         System.out.println("Введите айпишники: ");
-        for (int i = 0; i < n; i++) { // Изменено на < n
+        for (int i = 0; i < n; i++) {
             adresses[i] = input.nextLine();
         }
 
@@ -21,8 +21,8 @@ public class Main {
         System.out.println("Найденные IP-адреса в массиве:");
         for (String ip : adresses) {
             Matcher mat = pattern.matcher(ip);
-            if (mat.matches()) { // Используем if для проверки соответствия
-                System.out.println(ip); // Выводим ip, если он соответствует
+            if (mat.matches()) {
+                System.out.println(ip);
             }
         }
     }
